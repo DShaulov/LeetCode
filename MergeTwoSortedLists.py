@@ -29,7 +29,7 @@ class Solution:
                 return firstNode
             elif l2 == None:
                 while l1 != None:
-                    iteratorNode = l1
+                    myNode.next = l1
                     l1 = l1.next
                     myNode = myNode.next
                 return firstNode
@@ -46,17 +46,17 @@ class Solution:
 if __name__ == "__main__":
     solution = Solution()
     node1 = ListNode()
-    node1.val = 1
-    node1.next = ListNode()
+    node1.val = 2
+    """ node1.next = ListNode()
     node1.next.val = 2
     node1.next.next = ListNode()
-    node1.next.next.val = 4
+    node1.next.next.val = 4 """
     node2 = ListNode()
     node2.val = 1
-    node2.next = ListNode()
+    """ node2.next = ListNode()
     node2.next.val = 3
     node2.next.next = ListNode()
-    node2.next.next.val = 4
+    node2.next.next.val = 4 """
     node = solution.mergeTwoLists(node1, node2)
     while node != None:
         print(node.val)
